@@ -219,7 +219,7 @@ class RedisExtension extends \Nette\DI\CompilerExtension
 			$savePath = $session['host'];
 
 		} else {
-			$savePath = \sprintf('tcp://%s:%d', $session['host'], $session['port']);
+			$savePath = \sprintf('%s:%d', $session['host'], $session['port']);
 		}
 
 		if (!$params['persistent']) {
